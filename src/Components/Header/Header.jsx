@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from "../Assets/logo.png";
 import cart from "../Assets/cart.svg";
 
 const Header = ({ name }) => {
+  const [underline, setunderline] = useState("");
   return (
     <>
       <div className="header">
@@ -18,20 +19,50 @@ const Header = ({ name }) => {
           </div>
           <div className="nav-center">
             <ul className="navbar-ul">
-              <a href="/" className="nav-links">
+              <a
+                className="nav-links"
+                onClick={() => {
+                  setunderline("shop");
+                }}
+              >
                 Shop
+                {underline === "shop" ? <hr /> : ""}
               </a>
-              <a href="/" className="nav-links">
+              <a
+                className="nav-links"
+                onClick={() => {
+                  setunderline("men");
+                }}
+              >
                 Men
+                {underline === "men" ? <hr /> : ""}
               </a>
-              <a href="/" className="nav-links">
+              <a
+                className="nav-links"
+                onClick={() => {
+                  setunderline("women");
+                }}
+              >
                 Women
+                {underline === "women" ? <hr /> : ""}
               </a>
-              <a href="/" className="nav-links">
+              <a
+                className="nav-links"
+                onClick={() => {
+                  setunderline("jewelry");
+                }}
+              >
                 Jewelry
+                {underline === "jewelry" ? <hr /> : ""}
               </a>
-              <a href="/" className="nav-links">
+              <a
+                className="nav-links"
+                onClick={() => {
+                  setunderline("electronics");
+                }}
+              >
                 Electronics
+                {underline === "electronics" ? <hr /> : ""}
               </a>
             </ul>
           </div>
