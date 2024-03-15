@@ -13,3 +13,18 @@
   --primaryColor: #f47d2d;
   --primaryText: #515151;
 }
+/* utility classes */
+.btn {
+  font-size: 16px;
+  padding: 7px;
+  width: 120px;
+  text-align: center;
+  border: 1px solid var(--primaryText);
+  border-radius: 999px;
+  color: var(--primaryText);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
