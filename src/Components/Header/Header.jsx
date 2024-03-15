@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 
 const Header = ({ name }) => {
   const [underline, setunderline] = useState("home");
+  window.onscroll = () => {
+    if (document.documentElement.scrollTop > 20) {
+      document.querySelector(".header").classList.add("sticky");
+    } else {
+      document.querySelector(".header").classList.remove("sticky");
+    }
+  };
   return (
     <>
       <div className="header">
