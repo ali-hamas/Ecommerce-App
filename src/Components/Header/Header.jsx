@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./Header.css";
 import logo from "../Assets/logo.png";
 import cart from "../Assets/cart.svg";
+import { Link } from "react-router-dom";
 
 const Header = ({ name }) => {
-  const [underline, setunderline] = useState("");
+  const [underline, setunderline] = useState("home");
   return (
     <>
       <div className="header">
@@ -13,13 +14,30 @@ const Header = ({ name }) => {
             <div className="logo-img">
               <img src={logo} alt="logo" width={45} />
             </div>
-            <a href="/" className="logo-text">
+            <Link
+              to="/"
+              className="logo-text"
+              onClick={() => {
+                setunderline("home");
+              }}
+            >
               {name}
-            </a>
+            </Link>
           </div>
           <div className="nav-center">
             <ul className="navbar-ul">
-              <a
+              <Link
+                to={"/"}
+                className="nav-links"
+                onClick={() => {
+                  setunderline("home");
+                }}
+              >
+                Home
+                {underline === "home" ? <hr /> : ""}
+              </Link>
+              <Link
+                to={"/shop"}
                 className="nav-links"
                 onClick={() => {
                   setunderline("shop");
@@ -27,8 +45,9 @@ const Header = ({ name }) => {
               >
                 Shop
                 {underline === "shop" ? <hr /> : ""}
-              </a>
-              <a
+              </Link>
+              <Link
+                to={"/men"}
                 className="nav-links"
                 onClick={() => {
                   setunderline("men");
@@ -36,8 +55,9 @@ const Header = ({ name }) => {
               >
                 Men
                 {underline === "men" ? <hr /> : ""}
-              </a>
-              <a
+              </Link>
+              <Link
+                to={"/women"}
                 className="nav-links"
                 onClick={() => {
                   setunderline("women");
@@ -45,8 +65,9 @@ const Header = ({ name }) => {
               >
                 Women
                 {underline === "women" ? <hr /> : ""}
-              </a>
-              <a
+              </Link>
+              <Link
+                to={"/jewelry"}
                 className="nav-links"
                 onClick={() => {
                   setunderline("jewelry");
@@ -54,8 +75,9 @@ const Header = ({ name }) => {
               >
                 Jewelry
                 {underline === "jewelry" ? <hr /> : ""}
-              </a>
-              <a
+              </Link>
+              <Link
+                to={"/electronics"}
                 className="nav-links"
                 onClick={() => {
                   setunderline("electronics");
@@ -63,17 +85,35 @@ const Header = ({ name }) => {
               >
                 Electronics
                 {underline === "electronics" ? <hr /> : ""}
-              </a>
+              </Link>
             </ul>
           </div>
           <div className="nav-right">
-            <a href="/" className="fill-btn">
+            <Link
+              to={"/login"}
+              className="light-btn btn"
+              onClick={() => {
+                setunderline("");
+              }}
+            >
               Login
-            </a>
-            <a href="/" className="cart-btn">
+            </Link>
+            <Link
+              to={"/signup"}
+              className="color-btn btn"
+              onClick={() => {
+                setunderline("");
+              }}
+            >
+              Sign Up
+            </Link>
+            {/* <Link to={"/signup"} className="color-btn btn">
+              Logout
+            </Link>
+            <Link to={"/cart"} className="cart-btn">
               <img src={cart} alt="cart" />
               <span className="cart-num">10</span>
-            </a>
+            </Link> */}
           </div>
         </nav>
       </div>
