@@ -1,10 +1,37 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Shop from "./Pages/Shop";
+import Product from "./Pages/Product";
+import ShopCategory from "./Pages/ShopCategory";
 
 function App() {
   return (
     <>
-      <Header name="Ecomerce" />
+      <BrowserRouter>
+        <Header name="Ecomerce" />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/men" element={<ShopCategory category="men" />}></Route>
+          <Route
+            path="/women"
+            element={<ShopCategory category="women" />}
+          ></Route>
+          <Route
+            path="/jewelry"
+            element={<ShopCategory category="jewelry" />}
+          ></Route>
+          <Route
+            path="/electronics"
+            element={<ShopCategory category="electronics" />}
+          ></Route>
+          <Route path="/product" element={<Product />}>
+            <Route path=":/productId" element={<Product />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
