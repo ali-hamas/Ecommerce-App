@@ -1,5 +1,7 @@
 import React from "react";
 import "./Home.css";
+import CategoriesSection from "../Components/CategoriesSection/CategoriesSection";
+import FeaturedProductsSection from "../Components/FeaturedProductsSection/FeaturedProductsSection";
 
 const Home = () => {
   return (
@@ -12,6 +14,12 @@ const Home = () => {
             Latest Collections
           </a>
         </div>
+      </section>
+      <section className="section" id="categories">
+        <CategoriesSection />
+      </section>
+      <section className="section" id="latest-products">
+        <FeaturedProductsSection />
       </section>
     </>
   );

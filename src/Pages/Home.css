@@ -51,3 +51,6 @@
   border: 1px solid var(--primaryColor);
   color: #fff;
 }
+#latest-products {
+  background-color: #f6f7f9;
+}
