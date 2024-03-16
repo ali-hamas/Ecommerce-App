@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../Assets/logo.png";
-import cart from "../Assets/cart.svg";
+import logo from "../../../public/Assets/logo.png";
+import cart from "../../../public/Assets/cart.svg";
 import { Link } from "react-router-dom";
 
 const Header = ({ name }) => {
@@ -83,22 +83,12 @@ const Header = ({ name }) => {
                 Jewelry
                 {underline === "jewelry" ? <hr /> : ""}
               </Link>
-              <Link
-                to={"/electronics"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("electronics");
-                }}
-              >
-                Electronics
-                {underline === "electronics" ? <hr /> : ""}
-              </Link>
             </ul>
           </div>
           <div className="nav-right">
             <Link
               to={"/login"}
-              className="light-btn btn"
+              className="hollow-btn btn"
               onClick={() => {
                 setunderline("");
               }}
@@ -107,14 +97,14 @@ const Header = ({ name }) => {
             </Link>
             <Link
               to={"/signup"}
-              className="color-btn btn"
+              className="fill-btn btn"
               onClick={() => {
                 setunderline("");
               }}
             >
               Sign Up
             </Link>
-            {/* <Link to={"/signup"} className="color-btn btn">
+            {/* <Link to={"/signup"} className="fill-btn btn">
               Logout
             </Link>
             <Link to={"/cart"} className="cart-btn">

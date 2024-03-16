@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   background-color: #fff;
+  z-index: 10;
 }
 .sticky {
   position: sticky;
@@ -38,7 +39,6 @@ ul.navbar-ul .nav-links {
   position: relative;
 }
 ul.navbar-ul .nav-links:hover {
-  color: #000;
   color: var(--primaryColor);
 }
 hr {
