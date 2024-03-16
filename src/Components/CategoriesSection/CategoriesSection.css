@@ -1,0 +1,81 @@
+.category-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  gap: 30px;
+}
+.category-inner .single-category {
+  position: relative;
+  padding: 30px;
+  display: flex;
+}
+.category-men::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../public/Assets/men-category.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.category-women::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../public/Assets/women-category.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.category-jewelry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../../public/Assets/jewelry-category.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.single-category::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.single-category .single-category-inner {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.single-category-inner .category-name {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #fff;
+}
+.single-category-inner .category-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #e6e6e6;
+}
+.single-category-inner .fill-btn {
+  width: 130px;
+  margin-top: 10px;
+}
