@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import CategoriesSection from "../Components/CategoriesSection/CategoriesSection";
-import FeaturedProductsSection from "../Components/FeaturedProductsSection/FeaturedProductsSection";
+import ProductsSection from "../Components/ProductsSection/ProductsSection";
 
 const Home = () => {
   return (
@@ -15,11 +15,18 @@ const Home = () => {
           </a>
         </div>
       </section>
-      <section className="section" id="categories">
-        <CategoriesSection />
+      <section className="section">
+        <div className="section-inner">
+          <CategoriesSection />
+        </div>
       </section>
       <section className="section" id="latest-products">
-        <FeaturedProductsSection />
+        <div className="section-heading">
+          <a>Latest Collection</a>
+        </div>
+        <div className="section-inner">
+          <ProductsSection api={`https://fakestoreapi.com/products/?limit=8`} />
+        </div>
       </section>
     </>
   );
