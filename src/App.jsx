@@ -17,25 +17,25 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
-          <Route path="/men" element={<ShopCategory category="men" />}></Route>
+          <Route
+            path="/men"
+            element={<ShopCategory category="men's clothing" />}
+          ></Route>
           <Route
             path="/women"
-            element={<ShopCategory category="women" />}
+            element={<ShopCategory category="women's clothing" />}
           ></Route>
           <Route
-            path="/jewelry"
-            element={<ShopCategory category="jewelry" />}
-          ></Route>
-          <Route
-            path="/electronics"
-            element={<ShopCategory category="electronics" />}
+            path="/jewelery"
+            element={<ShopCategory category="jewelery" />}
           ></Route>
           <Route path="/product" element={<Product />}>
-            <Route path=":/productId" element={<Product />}></Route>
+            <Route path=":/id" element={<Product />}></Route>
           </Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/account" element={<SignUp />}></Route>
         </Routes>
       </BrowserRouter>
     </>
