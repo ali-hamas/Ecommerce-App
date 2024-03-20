@@ -11,20 +11,76 @@
 }
 :root {
   --primaryColor: #f47d2d;
+  --primaryHover: #ff6600;
   --primaryText: #515151;
+  --blackText: #1e181e;
+}
+html {
+  scroll-behavior: smooth;
 }
 /* utility classes */
 .btn {
   font-size: 16px;
-  padding: 7px;
-  width: 120px;
+  padding: 7px 15px;
+  min-width: 120px;
   text-align: center;
   border: 1px solid var(--primaryText);
   border-radius: 999px;
   color: var(--primaryText);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s linear;
 }
-.btn:hover {
-  transform: scale(1.1);
+.hollow-btn {
+  background-color: transparent;
+}
+.hollow-btn:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  border: 1px solid var(--primaryColor);
+}
+.fill-btn {
+  background-color: var(--primaryColor);
+  color: #fff;
+  border: 1px solid var(--primaryColor);
+}
+.fill-btn:hover {
+  background-color: var(--primaryHover);
+}
+.section {
+  padding: 50px 0;
+}
+.section .section-outer {
+  background-color: #f6f7f9;
+  padding: 50px 0;
+}
+.section .section-inner {
+  width: 80%;
+  margin: 0 auto;
+}
+.subscribe-section-inner {
+  border-radius: 10px;
+}
+.section-heading {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.section-heading a {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--blackText);
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+}
+.section-heading a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 4px;
+  background-color: var(--primaryColor);
+  border: none;
+  border-radius: 999px;
 }
