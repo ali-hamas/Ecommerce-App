@@ -5,7 +5,6 @@ import cart from "../../../public/Assets/cart.svg";
 import { Link } from "react-router-dom";
 
 const Header = ({ name }) => {
-  const [underline, setunderline] = useState("home");
   window.onscroll = () => {
     if (document.documentElement.scrollTop > 20) {
       document.querySelector(".header").classList.add("sticky");
@@ -21,87 +20,34 @@ const Header = ({ name }) => {
             <div className="logo-img">
               <img src={logo} alt="logo" width={45} />
             </div>
-            <Link
-              to="/"
-              className="logo-text"
-              onClick={() => {
-                setunderline("home");
-              }}
-            >
+            <Link to="/" className="logo-text">
               {name}
             </Link>
           </div>
           <div className="nav-center">
             <ul className="navbar-ul">
-              <Link
-                to={"/"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("home");
-                }}
-              >
+              <Link to={"/"} className="nav-links">
                 Home
-                {underline === "home" ? <hr /> : ""}
               </Link>
-              <Link
-                to={"/shop"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("shop");
-                }}
-              >
+              <Link to={"/shop"} className="nav-links">
                 Shop
-                {underline === "shop" ? <hr /> : ""}
               </Link>
-              <Link
-                to={"/men"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("men");
-                }}
-              >
+              <Link to={"/men"} className="nav-links">
                 Men
-                {underline === "men" ? <hr /> : ""}
               </Link>
-              <Link
-                to={"/women"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("women");
-                }}
-              >
+              <Link to={"/women"} className="nav-links">
                 Women
-                {underline === "women" ? <hr /> : ""}
               </Link>
-              <Link
-                to={"/jewelry"}
-                className="nav-links"
-                onClick={() => {
-                  setunderline("jewelry");
-                }}
-              >
-                Jewelry
-                {underline === "jewelry" ? <hr /> : ""}
+              <Link to={"/jewelery"} className="nav-links">
+                Jewelery
               </Link>
             </ul>
           </div>
           <div className="nav-right">
-            <Link
-              to={"/login"}
-              className="hollow-btn btn"
-              onClick={() => {
-                setunderline("");
-              }}
-            >
+            <Link to={"/login"} className="hollow-btn btn">
               Login
             </Link>
-            <Link
-              to={"/signup"}
-              className="fill-btn btn"
-              onClick={() => {
-                setunderline("");
-              }}
-            >
+            <Link to={"/signup"} className="fill-btn btn">
               Sign Up
             </Link>
             {/* <Link to={"/signup"} className="fill-btn btn">
