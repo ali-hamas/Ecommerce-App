@@ -50,6 +50,7 @@
   background-color: var(--primaryColor);
   border: 1px solid var(--primaryColor);
   color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #latest-products {
   background-color: #f6f7f9;
