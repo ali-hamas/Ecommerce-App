@@ -5,7 +5,7 @@ import ProductsSection from "../Components/ProductsSection/ProductsSection";
 const Shop = () => {
   return (
     <>
-      <section className="section">
+      <section className="section-padding">
         <div className="section-heading">
           <a>Shop</a>
         </div>
