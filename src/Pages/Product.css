@@ -1,0 +1,88 @@
+.product-inner {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  gap: 60px;
+}
+.product-inner .product-left {
+  width: 40%;
+}
+.product-left .product-img {
+  width: 100%;
+}
+.product-img img {
+  background-color: #fff;
+  width: 100%;
+  padding: 40px 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--primaryText);
+}
+.product-inner .product-right {
+  width: 60%;
+}
+.product-right .product-page-title {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.product-page-desc {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.product-page-ratings {
+  font-size: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.given-rating-count {
+  font-size: inherit;
+}
+.product-page-price {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--primaryColor);
+  margin: 30px 0;
+}
+.quantity-div {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primaryText);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.quantity-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  background-color: #f1f1f1;
+  width: 150px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.quantity-group button {
+  background-color: #e2e2e2;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.quantity-group button:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+.product-right .btn {
+  width: 265px;
+  padding: 10px 20px;
+}
