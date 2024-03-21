@@ -18,7 +18,7 @@ const FeaturedProductsSection = (props) => {
         {Products.map((item) => {
           return (
             <Link
-              to={"/product"}
+              to={`/product/${item.id}`}
               className="product"
               key={item.id}
               id={item.id}
