@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Footer.css";
 import logo from "../../../public/Assets/logo.png";
 import PlayStore from "../../../public/Assets/appstore.png";
 import AppStore from "../../../public/Assets/playstore.png";
 import { Link } from "react-router-dom";
-import { productContext } from "../../Context/ProductContext";
+// import { productContext } from "../../Context/ProductContext";
 
 const Footer = () => {
-  const appName = useContext(productContext);
+  // const appName = useContext(productContext);
   return (
     <>
       <section className="footer-outer">
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="footer-left">
             <Link to="/" className="logo">
               <img src={logo} alt="logo" width={45} />
-              <span className="logo-text">{appName}</span>
+              <span className="logo-text">Ecommerce</span>
             </Link>
             <div className="footer-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint

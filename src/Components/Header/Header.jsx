@@ -1,8 +1,9 @@
-import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../../public/Assets/logo.png";
 import cart from "../../../public/Assets/cart.svg";
 import { Link } from "react-router-dom";
+// import { useProductContext } from "../../Context/ProductContext";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Header = ({ name }) => {
   window.onscroll = () => {
@@ -12,6 +13,7 @@ const Header = ({ name }) => {
       document.querySelector(".header").classList.remove("sticky");
     }
   };
+  // const { appName } = useProductContext();
   return (
     <>
       <div className="header">
@@ -21,7 +23,7 @@ const Header = ({ name }) => {
               <img src={logo} alt="logo" width={45} />
             </div>
             <Link to="/" className="logo-text">
-              {name}
+              Ecommerce
             </Link>
           </div>
           <div className="nav-center">
@@ -44,19 +46,23 @@ const Header = ({ name }) => {
             </ul>
           </div>
           <div className="nav-right">
-            <Link to={"/login"} className="hollow-btn btn">
-              Login
-            </Link>
-            <Link to={"/signup"} className="fill-btn btn">
-              Sign Up
-            </Link>
-            {/* <Link to={"/signup"} className="fill-btn btn">
-              Logout
-            </Link>
-            <Link to={"/cart"} className="cart-btn">
-              <img src={cart} alt="cart" />
-              <span className="cart-num">10</span>
-            </Link> */}
+            <SignedOut>
+              <Link to={"/login"} className="hollow-btn btn">
+                Login
+              </Link>
+              <Link to={"/signup"} className="fill-btn btn">
+                Sign Up
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <Link to={"/account"} className="fill-btn btn">
+                Account
+              </Link>
+              <Link to={"/cart"} className="cart-btn">
+                <img src={cart} alt="cart" />
+                <span className="cart-num">1</span>
+              </Link>
+            </SignedIn>
           </div>
         </nav>
       </div>
